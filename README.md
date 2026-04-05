@@ -1,9 +1,5 @@
 # Autonomous Code Review & Performance Optimization System
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen.svg)
-
 A sophisticated multi-agent agentic AI system that autonomously analyzes, optimizes, and tests code using Claude LLMs. This project demonstrates advanced AI engineering with autonomous workflows, custom evaluation frameworks, and comparative LLM analysis.
 
 ## Table of Contents
