@@ -1,0 +1,27 @@
+{
+  "workflow_id": "analysis_1775406830",
+  "stages": {
+    "analysis": {
+      "agent_type": "CodeAnalyzerAgent",
+      "model": "claude-3-5-haiku-20241022",
+      "success": false,
+      "result": {},
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-haiku-20241022'}, 'request_id': 'req_011CZkwsRnA7ohiJmXsqb1L5'}",
+      "execution_time": 3.62311053276062,
+      "tokens_used": 0,
+      "metadata": {}
+    }
+  },
+  "timestamp": 1775406830.2155163,
+  "evaluation": {
+    "workflow_id": "analysis_1775406830",
+    "timestamp": 1775406830.2155163,
+    "metric_scores": {
+      "autonomy": 75.0
+    },
+    "weighted_scores": {
+      "autonomy": 0.0
+    },
+    "overall_score": 0.0
+  }
+}

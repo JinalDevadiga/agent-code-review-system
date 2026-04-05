@@ -1,0 +1,27 @@
+{
+  "workflow_id": "analysis_1775405821",
+  "stages": {
+    "analysis": {
+      "agent_type": "CodeAnalyzerAgent",
+      "model": "claude-opus-4.6",
+      "success": false,
+      "result": {},
+      "error": "Analysis failed: \"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "execution_time": 0.018085241317749023,
+      "tokens_used": 0,
+      "metadata": {}
+    }
+  },
+  "timestamp": 1775405821.9443426,
+  "evaluation": {
+    "workflow_id": "analysis_1775405821",
+    "timestamp": 1775405821.9443426,
+    "metric_scores": {
+      "autonomy": 75.0
+    },
+    "weighted_scores": {
+      "autonomy": 0.0
+    },
+    "overall_score": 0.0
+  }
+}

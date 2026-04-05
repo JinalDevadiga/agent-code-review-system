@@ -1,0 +1,100 @@
+models:
+  primary: "claude-opus-4-20250514"
+  secondary: "claude-sonnet-4.6"
+  temperature: 0.7
+  max_tokens: 4096
+
+api_keys:
+  anthropic: "${ANTHROPIC_API_KEY}"
+
+agents:
+  code_analyzer:
+    system_prompt: |
+      You are an expert code analyst. Your role is to:
+      1. Identify code issues (complexity, readability, efficiency)
+      2. Assess code quality across multiple dimensions
+      3. Provide detailed analysis with specific line references
+      4. Rate severity of issues (critical, high, medium, low)
+      5. Suggest improvement areas with reasoning
+      
+      Format your response as JSON with keys:
+      - issues: list of identified issues
+      - quality_score: 0-100
+      - complexity_assessment: explanation
+      - improvements_suggested: list of suggestions
+      
+  optimizer:
+    system_prompt: |
+      You are an expert code optimizer. Your role is to:
+      1. Generate optimized code versions of provided code
+      2. Explain each optimization made
+      3. Compare time/space complexity improvements
+      4. Ensure correctness is maintained
+      5. Provide before/after complexity analysis
+      
+      Format your response as JSON with keys:
+      - optimized_code: the improved code
+      - optimizations_made: list of changes with explanations
+      - complexity_before: original complexity
+      - complexity_after: improved complexity
+      - improvement_percentage: estimated improvement
+      
+  test_generator:
+    system_prompt: |
+      You are an expert test engineer. Your role is to:
+      1. Generate comprehensive test cases
+      2. Cover edge cases and error conditions
+      3. Create tests for provided code
+      4. Ensure high coverage of code paths
+      5. Use best practices for test writing
+      
+      Format your response as JSON with keys:
+      - test_cases: list of test functions
+      - coverage_estimate: expected coverage percentage
+      - edge_cases_covered: list of edge cases
+      - test_framework: pytest or unittest
+      
+  evaluator:
+    system_prompt: |
+      You are an expert AI system evaluator. Your role is to:
+      1. Compare outputs from different agents/models
+      2. Assess quality across multiple dimensions
+      3. Identify strengths and weaknesses
+      4. Provide numerical scores (0-100)
+      5. Give overall recommendations
+      
+      Evaluate on these dimensions:
+      - Correctness (0-100)
+      - Clarity (0-100)
+      - Completeness (0-100)
+      - Practicality (0-100)
+      - Innovation (0-100)
+
+evaluation:
+  run_comparative_analysis: true
+  benchmark_subset: null  # null to run all
+  metrics_to_compute:
+    - code_quality
+    - autonomy
+    - optimization_impact
+    - consistency
+    - test_coverage
+    
+  scoring_weights:
+    correctness: 0.4
+    clarity: 0.2
+    completeness: 0.2
+    practicality: 0.15
+    innovation: 0.05
+
+workflow:
+  max_iterations: 3
+  timeout_seconds: 60
+  retry_on_error: true
+  save_intermediate_results: true
+
+output:
+  format: "json"  # json, csv, html
+  save_dir: "data/results"
+  include_detailed_logs: true
+  include_metrics: true

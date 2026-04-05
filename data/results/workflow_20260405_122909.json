@@ -1,0 +1,27 @@
+{
+  "workflow_id": "analysis_1775406549",
+  "stages": {
+    "analysis": {
+      "agent_type": "CodeAnalyzerAgent",
+      "model": "claude-3-5-haiku-20241022",
+      "success": false,
+      "result": {},
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZkwWmvXzQqiZGi43986Z'}",
+      "execution_time": 3.3652350902557373,
+      "tokens_used": 0,
+      "metadata": {}
+    }
+  },
+  "timestamp": 1775406549.9141831,
+  "evaluation": {
+    "workflow_id": "analysis_1775406549",
+    "timestamp": 1775406549.9141831,
+    "metric_scores": {
+      "autonomy": 75.0
+    },
+    "weighted_scores": {
+      "autonomy": 0.0
+    },
+    "overall_score": 0.0
+  }
+}

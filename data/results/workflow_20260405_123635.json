@@ -1,0 +1,27 @@
+{
+  "workflow_id": "analysis_1775406995",
+  "stages": {
+    "analysis": {
+      "agent_type": "CodeAnalyzerAgent",
+      "model": "claude-3-5",
+      "success": false,
+      "result": {},
+      "error": "Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5'}, 'request_id': 'req_011CZkx5cJFyrSDbteZbTKTz'}",
+      "execution_time": 3.3902299404144287,
+      "tokens_used": 0,
+      "metadata": {}
+    }
+  },
+  "timestamp": 1775406995.3458698,
+  "evaluation": {
+    "workflow_id": "analysis_1775406995",
+    "timestamp": 1775406995.3458698,
+    "metric_scores": {
+      "autonomy": 75.0
+    },
+    "weighted_scores": {
+      "autonomy": 0.0
+    },
+    "overall_score": 0.0
+  }
+}
