@@ -16,7 +16,6 @@ A sophisticated multi-agent agentic AI system that autonomously analyzes, optimi
 - [Performance](#performance)
 - [Advanced Usage](#advanced-usage)
 - [Project Structure](#project-structure)
-- [License](#license)
 
 ---
 
